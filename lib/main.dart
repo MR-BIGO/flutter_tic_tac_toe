@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tic_tac_toe/presentation/screens/intro_slider.dart';
 
-import 'presentation/screens/first_screen.dart';
+import 'presentation/screens/home_screen.dart';
 import 'presentation/screens/game_screen.dart';
 
 void main() {
@@ -15,10 +16,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Tic Tac Toe",
-      initialRoute: "/firstScreen",
+      initialRoute: "/introScreen",
       routes: {
-        "/firstScreen": (context) => const FirstScreen(),
+        "/homeScreen": (context) => const HomeScreen(),
         "/gameScreen": (context) => const GameScreen(),
+        "/introScreen": (context) => IntroSliderScreen(),
       },
     );
   }

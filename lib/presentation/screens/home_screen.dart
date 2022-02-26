@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tic_tac_toe/presentation/widgets/help_bottomsheet.dart';
 
-class FirstScreen extends StatelessWidget {
-  const FirstScreen({Key? key}) : super(key: key);
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class FirstScreen extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.red[400],
           image: const DecorationImage(
-            image: AssetImage('assets/images/asset_image.png'),
+            image: AssetImage('assets/images/home_tic_tac_toe.png'),
             fit: BoxFit.scaleDown,
           ),
         ),
@@ -32,7 +32,7 @@ class FirstScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(0, 16, 0, 16),
+              padding: const EdgeInsets.fromLTRB(0, 32, 0, 16),
               child: SizedBox(
                 width: 250,
                 height: 60,
@@ -63,10 +63,7 @@ class FirstScreen extends StatelessWidget {
                   elevation: 0,
                   backgroundColor: Colors.transparent,
                   onPressed: () {
-                    showModalBottomSheet(
-                      context: context,
-                      builder: (context) => HelpSheet(),
-                    );
+                   Navigator.pushReplacementNamed(context, "/introScreen");
                   },
                   child: const Text(
                     "Help",

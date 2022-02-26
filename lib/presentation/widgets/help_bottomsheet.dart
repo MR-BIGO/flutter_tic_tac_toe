@@ -6,7 +6,9 @@ class HelpSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue,
+      decoration: ShapeDecoration(shape: ContinuousRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20)))),
+      
+      
     );
   }
 }
