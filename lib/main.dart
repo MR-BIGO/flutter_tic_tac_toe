@@ -16,11 +16,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Tic Tac Toe",
-      initialRoute: "/introScreen",
+      initialRoute: "/gameScreen",
       routes: {
         "/homeScreen": (context) => const HomeScreen(),
         "/gameScreen": (context) => const GameScreen(),
-        "/introScreen": (context) => IntroSliderScreen(),
+        "/introScreen": (context) => const IntroSliderScreen(),
       },
     );
   }

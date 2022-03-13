@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tic_tac_toe/presentation/widgets/list_item.dart';
 
 class GameScreen extends StatelessWidget {
   const GameScreen({Key? key}) : super(key: key);
@@ -6,71 +7,65 @@ class GameScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-      ),
       body: Container(
         color: Colors.yellow,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            GridView.count(
-              childAspectRatio: 2.4,
-              shrinkWrap: true,
-              crossAxisCount: 3,
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 10,
-              children: [
-                ListTile(
-                  title: Text("data"),
-                  tileColor: Colors.white,
-                  selectedTileColor: Colors.white,
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(26, 100, 26, 0),
+                child: GridView.count(
+                  childAspectRatio: 5 / 4,
+                  shrinkWrap: true,
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 30,
+                  children: [
+                    ListItem(
+                      key: UniqueKey(),
+                    ),
+                    ListItem(
+                      key: UniqueKey(),
+                    ),
+                    ListItem(
+                      key: UniqueKey(),
+                    ),
+                    ListItem(
+                      key: UniqueKey(),
+                    ),
+                    ListItem(
+                      key: UniqueKey(),
+                    ),
+                    ListItem(
+                      key: UniqueKey(),
+                    ),
+                    ListItem(
+                      key: UniqueKey(),
+                    ),
+                    ListItem(
+                      key: UniqueKey(),
+                    ),
+                    ListItem(
+                      key: UniqueKey(),
+                    ),
+                  ],
                 ),
-                ListTile(
-                  title: Text("data"),
-                  tileColor: Colors.white,
-                  selectedTileColor: Colors.white,
-                ),
-                ListTile(
-                  title: Text("data"),
-                  tileColor: Colors.white,
-                  selectedTileColor: Colors.white,
-                ),
-                ListTile(
-                  title: Text("data"),
-                  tileColor: Colors.white,
-                  selectedTileColor: Colors.white,
-                ),
-                ListTile(
-                  title: Text("data"),
-                  tileColor: Colors.white,
-                  selectedTileColor: Colors.white,
-                ),
-                ListTile(
-                  title: Text("data"),
-                  tileColor: Colors.white,
-                  selectedTileColor: Colors.white,
-                ),
-                ListTile(
-                  title: Text("data"),
-                  tileColor: Colors.white,
-                  selectedTileColor: Colors.white,
-                ),
-                ListTile(
-                  title: Text("data"),
-                  tileColor: Colors.white,
-                  selectedTileColor: Colors.white,
-                ),
-                ListTile(
-                  title: Text("data"),
-                  tileColor: Colors.white,
-                  selectedTileColor: Colors.white,
-                ),
-              ],
+              ),
             ),
-            FloatingActionButton(onPressed: () {})
+            Padding(
+              padding: const EdgeInsets.fromLTRB(26, 180, 26, 40),
+              child: FloatingActionButton(
+                child: Container(
+                  decoration: ShapeDecoration(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
+                  width: 200,
+                  height: 40,
+                  child: Text('Play Again'),
+                ),
+                onPressed: () {},
+              ),
+            )
           ],
         ),
       ),
