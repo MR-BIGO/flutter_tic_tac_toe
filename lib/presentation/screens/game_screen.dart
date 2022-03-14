@@ -16,52 +16,27 @@ class GameScreen extends StatelessWidget {
             Center(
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(26, 100, 26, 0),
-                child: GridView.count(
-                  childAspectRatio: 5 / 4,
-                  shrinkWrap: true,
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 20,
-                  mainAxisSpacing: 30,
-                  children: [
-                    ListItem(
-                      key: UniqueKey(),
-                    ),
-                    ListItem(
-                      key: UniqueKey(),
-                    ),
-                    ListItem(
-                      key: UniqueKey(),
-                    ),
-                    ListItem(
-                      key: UniqueKey(),
-                    ),
-                    ListItem(
-                      key: UniqueKey(),
-                    ),
-                    ListItem(
-                      key: UniqueKey(),
-                    ),
-                    ListItem(
-                      key: UniqueKey(),
-                    ),
-                    ListItem(
-                      key: UniqueKey(),
-                    ),
-                    ListItem(
-                      key: UniqueKey(),
-                    ),
-                  ],
-                ),
+                child: GridView.builder(
+                    shrinkWrap: true,
+                    itemCount: 9,
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 3),
+                    itemBuilder: (BuildContext context, int index) {
+                      return ListItem();
+                    }),
               ),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(26, 180, 26, 40),
               child: FloatingActionButton(
                 child: Container(
-                  decoration: ShapeDecoration(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
+                  decoration: ShapeDecoration(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20))),
                   width: 200,
                   height: 40,
-                  child: Text('Play Again'),
+                  child: const Text('Play Again'),
                 ),
                 onPressed: () {},
               ),
