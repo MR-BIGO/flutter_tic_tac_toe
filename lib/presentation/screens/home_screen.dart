@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: Colors.transparent,
         centerTitle: true,
         title: Text(
@@ -22,7 +23,7 @@ class HomeScreen extends StatelessWidget {
       body: Container(
         constraints: const BoxConstraints.expand(),
         decoration: BoxDecoration(
-          color: Colors.red[400],
+          color: Colors.red[300],
           image: const DecorationImage(
             image: AssetImage('assets/images/home_tic_tac_toe.png'),
             fit: BoxFit.scaleDown,
@@ -40,14 +41,14 @@ class HomeScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12)),
                   child: const Text(
-                    "start",
+                    "Start",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 28,
                     ),
                   ),
                   heroTag: "startbtn",
-                  backgroundColor: Colors.amber[400],
+                  backgroundColor: Colors.amber[700],
                   elevation: 4,
                   onPressed: () {
                     Navigator.pushNamed(context, "/gameScreen");

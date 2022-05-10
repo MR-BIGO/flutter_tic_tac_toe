@@ -55,7 +55,7 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
     for (int i = 0; i < slides.length; i++) {
       Slide currentSlide = slides[i];
       tabs.add(
-        Container(
+        SizedBox(
           width: double.infinity,
           height: double.infinity,
           child: Container(
@@ -91,9 +91,10 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
                   child: Text(
                     currentSlide.description!,
                     style: const TextStyle(
-                      fontSize: 16,
+                      fontSize: 18,
                       height: 1.5,
                       color: Colors.black,
+                      
                     ),
                     maxLines: 5,
                     textAlign: TextAlign.center,
@@ -112,11 +113,11 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
   @override
   Widget build(BuildContext context) {
     return IntroSlider(
-      backgroundColorAllSlides: Colors.cyan[100],
-      renderSkipBtn: Text(
+      backgroundColorAllSlides: Colors.red[300],
+      renderSkipBtn: const Text(
         "skip",
         style: TextStyle(
-          color: Colors.green[700],
+          color: Colors.black,
         ),
       ),
       renderNextBtn: Container(
@@ -128,12 +129,12 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
             borderRadius: BorderRadius.circular(12),
           ),
         ),
-        child: Center(
+        child: const Center(
           child: Text(
             "next",
             style: TextStyle(
               fontSize: 16,
-              color: Colors.green[700],
+              color: Colors.black,
             ),
           ),
         ),
@@ -147,12 +148,12 @@ class _IntroSliderScreenState extends State<IntroSliderScreen> {
             borderRadius: BorderRadius.circular(12),
           ),
         ),
-        child: Center(
+        child: const Center(
           child: Text(
             "done",
             style: TextStyle(
               fontSize: 16,
-              color: Colors.green[700],
+              color: Colors.black,
             ),
           ),
         ),
