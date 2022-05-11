@@ -42,42 +42,42 @@ class GameProvider with ChangeNotifier {
     if (_symbols[0] != "" &&
         _symbols[0] == _symbols[1] &&
         _symbols[0] == _symbols[2]) {
-      _winner = _symbols[0];
+      _winner = _symbols[0] + " won";
       _isclickable = false;
     } else if (_symbols[3] != "" &&
         _symbols[3] == _symbols[4] &&
         _symbols[3] == _symbols[5]) {
-      _winner = _symbols[3];
+      _winner = _symbols[3] + " won";
       _isclickable = false;
     } else if (_symbols[6] != "" &&
         _symbols[6] == _symbols[7] &&
         _symbols[6] == _symbols[8]) {
-      _winner = _symbols[6];
+      _winner = _symbols[6] + " won";
       _isclickable = false;
     } else if (_symbols[0] != "" &&
         _symbols[0] == _symbols[3] &&
         _symbols[0] == _symbols[6]) {
-      _winner = _symbols[0];
+      _winner = _symbols[0] + " won";
       _isclickable = false;
     } else if (_symbols[1] != "" &&
         _symbols[1] == _symbols[4] &&
         _symbols[1] == _symbols[7]) {
-      _winner = _symbols[1];
+      _winner = _symbols[1] + " won";
       _isclickable = false;
     } else if (_symbols[2] != "" &&
         _symbols[2] == _symbols[5] &&
         _symbols[2] == _symbols[8]) {
-      _winner = _symbols[2];
+      _winner = _symbols[2] + " won";
       _isclickable = false;
     } else if (_symbols[0] != "" &&
         _symbols[0] == _symbols[4] &&
         _symbols[0] == _symbols[8]) {
-      _winner = _symbols[0];
+      _winner = _symbols[0] + " won";
       _isclickable = false;
     } else if (_symbols[2] != "" &&
         _symbols[2] == _symbols[4] &&
         _symbols[2] == _symbols[6]) {
-      _winner = _symbols[2];
+      _winner = _symbols[2] + " won";
       _isclickable = false;
     } else if (_checkedBoxes == 9) {
       _winner = "Draw";

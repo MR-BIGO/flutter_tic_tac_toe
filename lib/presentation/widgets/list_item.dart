@@ -18,7 +18,7 @@ class ListItem extends StatelessWidget {
             builder: (BuildContext context) => AlertDialog(
               backgroundColor: Colors.yellow[100],
               title: const Text(
-                'The winner is',
+                'The end result',
                 textAlign: TextAlign.center,
               ),
               content: Text(
